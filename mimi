@@ -1,0 +1,21 @@
+<?php
+ //echo "File Aksi Barang"
+include 'koneksi.php';
+
+$Kode_barang = @$_POST['Kode_barang'];
+$Nama_barang = @$_POST['Nama_barang'];
+$Satuan = @$_POST['Satuan'];
+
+//echo $Satuan;
+
+mysqli_query($Kon,"INSERT INTO `barang` (`Kode_barang`, `Nama_barang`, `Satuan`, `Harga`, `Stok`) VALUES ('$Kode_barang', '$Nama_barang', '$Satuan', '12000', '3')");
+
+
+ echo " data " . $Kode_barang . " Sudah Tersimpan ";
+ echo "<a href='tampil_barang.php'>Kembali</a>";
+
+// mysqli_query($Kon,"datasql");
+
+// echo "Data Telah Tersimpan";				aaaaaaaaaaaaa
+// ;
+?>
